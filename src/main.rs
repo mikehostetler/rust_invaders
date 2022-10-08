@@ -47,9 +47,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     });
 
     // Game Loop
-    let mut player: Player = Player::new();
+    let mut player: Player = Player::default();
     let mut instant: Instant = Instant::now();
-    let mut invaders: Invaders = Invaders::new();
+    let mut invaders: Invaders = Invaders::default();
     'gameloop: loop {
         // Per-frame init
         let delta = instant.elapsed();

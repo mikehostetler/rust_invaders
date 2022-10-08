@@ -19,12 +19,6 @@ pub struct Invaders {
 
 impl Default for Invaders {
     fn default() -> Self {
-        Self::new()
-    }
-}
-
-impl Invaders {
-    pub fn new() -> Self {
         let mut army = Vec::new();
         for x in 0..NUM_COLS {
             for y in 0..NUM_ROWS {
@@ -46,6 +40,31 @@ impl Invaders {
             direction: 1,
         }
     }
+}
+
+impl Invaders {
+    // pub fn new() -> Self {
+    //     let mut army = Vec::new();
+    //     for x in 0..NUM_COLS {
+    //         for y in 0..NUM_ROWS {
+    //             if (x > 1)
+    //                 && (x < NUM_COLS - 2)
+    //                 && (y > 0)
+    //                 && (y < 9)
+    //                 && (x % 2 == 0)
+    //                 && (y % 2 == 0)
+    //             {
+    //                 army.push(Invader { x, y })
+    //             }
+    //         }
+    //     }
+
+    //     Self {
+    //         army,
+    //         move_timer: Timer::from_millis(2000),
+    //         direction: 1,
+    //     }
+    // }
 
     pub fn update(&mut self, delta: Duration) -> bool {
         self.move_timer.update(delta);

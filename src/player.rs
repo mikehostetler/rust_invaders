@@ -15,18 +15,23 @@ pub struct Player {
 
 impl Default for Player {
     fn default() -> Self {
-        Self::new()
-    }
-}
-
-impl Player {
-    pub fn new() -> Self {
-        Self {
+        // Self::new()
+        Player {
             x: NUM_COLS / 2,
             y: NUM_ROWS - 1,
             shots: Vec::new(),
         }
     }
+}
+
+impl Player {
+    // pub fn new() -> Self {
+    //     Self {
+    //         x: NUM_COLS / 2,
+    //         y: NUM_ROWS - 1,
+    //         shots: Vec::new(),
+    //     }
+    // }
 
     pub fn move_left(&mut self) {
         if self.x > 0 {
